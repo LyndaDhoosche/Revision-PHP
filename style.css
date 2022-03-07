@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(images/imagecoding3.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+    color: black;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    width: 800px;
+    background-color: rgb(235, 239, 241);
+    padding: 10px;
+    border-right: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "article"
+        "footer";
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #aaa;
+    padding-bottom: 5PX;
+    border-bottom: 1px dashed rgb(145, 145, 145);
+
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px dashed rgb(145, 145, 145);
+    padding-top: 12px;
+    padding-bottom: 10px;
+}
+
+.navCode {
+    text-align: center;
+}
+
+.navCode h2 {
+    font-size: 20px;
+    font-family: times;
+}
+.logo {
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    opacity: 0.75;
+}
+
+.logo:hover {
+    opacity: 1;
+
+}
+
+article {
+    grid-area: article;
+    width: 80%;
+    margin: auto;
+   
+}
+
+article p {
+    text-align: justify;
+}
+
+article h1 {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 35px;
+    font-family: times;
+}
+
+.imgLogo {
+    width: 200px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    color: rgb(131, 131, 131);
+    padding-top: 25px;
+    margin-top: 20px;
+    border-top: 1px dashed rgb(145, 145, 145) ;
+}
+
+@media screen and (max-width: 800px) {
+    #container {
+        width: 90%;
+        margin: auto;
+       
+    }
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+    .navCode h2 {
+        font-size: 15px;
+    }
+    .imgLogo {
+        width: 100%;
+        margin-right: 0px;
+    }
+}
