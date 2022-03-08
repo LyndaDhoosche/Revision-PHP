@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -10,10 +11,13 @@ body {
     color: black;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
+    
+    
+     
 }
 
 #container {
-    width: 800px;
+    width: 768px;
     background-color: rgb(235, 239, 241);
     padding: 10px;
     border-right: 1px solid black;
@@ -69,7 +73,7 @@ nav {
 
 article {
     grid-area: article;
-    width: 80%;
+    width: 76%;
     margin: auto;
    
 }
@@ -101,7 +105,8 @@ footer {
     border-top: 1px dashed rgb(145, 145, 145) ;
 }
 
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 768px) {
     #container {
         width: 90%;
         margin: auto;
@@ -117,5 +122,8 @@ footer {
     .imgLogo {
         width: 100%;
         margin-right: 0px;
+    }
+    article h2 {
+        font-size: 20px;
     }
 }

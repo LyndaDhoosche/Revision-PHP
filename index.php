@@ -1,6 +1,8 @@
 <?php
-$logos = $_GET['logos'];
-switch ($logos) {
+$definition = "HTML, CSS et PHP sont des acronymes pour différents langages de codage utilisés pour afficher des pages Web sur Internet. Chacun a un objectif et une fonction différents et ils travaillent ensemble pour fournir de beaux sites Web avec un contenu mis à jour à votre navigateur Web.";
+if (isset($_GET['logos'])) {
+    $logos = $_GET['logos'];
+    switch ($logos) {
     case 1:
         $definition = "<h1>HTML</h1>
         <img src=\"images/html logo.jpg\" class=\"imgLogo\" alt=\"logo HTML\">
@@ -46,15 +48,15 @@ switch ($logos) {
         Les feuilles de style CSS, comment ça marche ? 
         Tout comme HTML, CSS est un langage facile à prendre en main. Le style d'un document web peut être implémenté directement dans le code HTML ou inséré dans un document différent. 
 
-        <h2>Dans la ligne</h2>
+        <h3>Dans la ligne</h3>
         Il est possible d'appliquer du CSS directement dans la balise HTML d'un élément avec l'attribut style. 
         Exemple : -p style=\"background-color: #FFFFFF; »-Mon texte-/p-. Cet exemple applique un arrière-plan blanc au paragraphe \"Mon texte\". 
 
-        <h2>En interne</h2>
+        <h3>En interne</h3>
         Plutôt que de mettre un peu de CSS dans chaque balise HTML, il est possible de le réunir dans une balise -style- à l'intérieur de la balise -head- en début de document HTML. 
         Exemple :  -style type=\"text/css\"-p {background-color: #FFFFFF;-/style-. Ceci s'applique alors à tous les paragraphes du document.
 
-        <h2>La feuille de style en externe</h2>
+        <h3>La feuille de style en externe</h3>
         À cause notamment de la taille des sites web aujourd'hui et des très nombreux styles qui peuvent apparaître, ces 2 types d'implémentation ne sont plus vraiment utilisés. En effet le style d'un site web peut contenir des centaines voire des milliers de lignes de code. 
         La feuille de style est la manière recommandée de formater un document HTML. On crée tout un document dédié au style et écrit en CSS, souvent appelé style.css. Il se présente ainsi :
         Sélecteur {propriété: valeur; propriété: valeur; propriété: valeur;}
@@ -84,12 +86,12 @@ switch ($logos) {
         <img src=\"images/php logo.jpg\" class=\"imgLogo\" alt=\"logo HTML\">
         PHP est un langage de programmation côté serveur à code source ouvert que de nombreux développeurs utilisent pour le développement Web. C'est également un langage polyvalent que vous pouvez utiliser pour réaliser de nombreux projets, notamment des interfaces graphiques (GUI).
 
-        <H2>Que signifie PHP ?</H2>
+        <h2>Que signifie PHP ?</h2>
         L'abréviation PHP signifiait initialement Personal Homepage (page d'accueil personnelle), mais c'est maintenant un acronyme récursif pour Hypertext Preprocessor. La première version de PHP a été lancée il y a 26 ans. On en est maintenant à la version 8, sortie en novembre 2020, mais la version 7 reste la plus utilisée.
         PHP fonctionne sur le moteur Zend, qui est l'implémentation la plus populaire. Il en existe également d'autres, comme parrot, HPVM (Hip Hop Virtual Machine) et Hip Hop créé par Facebook. PHP est surtout utilisé pour créer des serveurs Web. Il fonctionne sur le navigateur et l'est également capable en ligne de commande. Ainsi, si vous n'avez pas envie d'afficher la sortie de votre code dans le navigateur, vous pouvez l'afficher dans le terminal.
         
-        <H2>À quoi sert PHP ?</H2>
-        PHP a deux applications principales :
+        <h2>À quoi sert PHP ?</h2>
+        <h3>PHP a deux applications principales :</h3>
         La programmation de scripts côté serveur. PHP est bien adapté au développement de sites et d'applications Web dynamiques.
         Les scripts en ligne de commande. Comme avec Python et Perl, vous pouvez exécuter des scripts PHP à partir de la ligne de commande pour effectuer des tâches redondantes comme l'envoi d'e-mails et la génération de fichiers PDF.
         <H2>Les avantages de PHP</H2>
@@ -102,6 +104,7 @@ switch ($logos) {
             <li>Communauté : PHP dispose d'une communauté en ligne très solidaire. La documentation officielle fournit des guides sur la façon d'utiliser les fonctionnalités et vous pouvez facilement résoudre votre problème si vous êtes bloqué.</li>
         </ul>";
         break;
+}
 }
 ?>
 
